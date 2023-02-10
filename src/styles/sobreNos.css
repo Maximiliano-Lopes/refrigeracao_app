@@ -1,0 +1,60 @@
+.historiaCard{
+    width: 80%;
+    display: flex;
+    height: max-content;
+    background-color: rgba(255, 0, 0, 0.79);
+    border-right: 5px solid rgba(114, 6, 6, 0.756);
+    border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+    padding: 1vw;
+    border-radius: 20px;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+.oficinasImg{
+    width: 25vw;
+    border: 5px solid rgba(231, 193, 1, 0.564);
+    border-radius: 20px;
+}
+.historiaCard p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1vw;
+    text-align: justify;
+    font-size: 2vw;
+}
+#tituloSobre{
+    text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+    font-size: 3vw;
+}
+
+@media only screen and (max-width: 600px){
+    .historiaCard{
+        flex-direction: column;
+        align-items: center;
+    }
+    .historiaCard p{
+        font-size: 4vw;
+        padding: 4vw;
+    }
+    .oficinasImg{
+        width: 50vw;
+        border: 5px solid rgba(231, 193, 1, 0.848);
+        border-radius: 20px;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+    #assinatura {
+        font-size: 2.5vw;
+    }
+    #tituloSobre{
+        text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+        font-size: 8vw;
+    }
+    strong{
+        text-shadow: 1px 1px 1px rgba(255, 255, 0, 0.462);
+    }
+    a{
+        width: fit-content;
+    }
+
+}

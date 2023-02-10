@@ -14,8 +14,9 @@ import UseMap from "./components/Map";
 import Whatsapplogo from "./images/WhatsAppLogo.webp";
 import FixoLogo from "./images/telefoneFixo.png";
 import EmailLogo from "./images/EmailIcon.png";
-
+import {Link} from "react-router-dom";
 import { Reviews } from "./components/Reviews";
+
 
 function App() {
   const url =
@@ -23,29 +24,29 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
-        <img src={logo} />
-        <ul>
-          <li>
-            <a>sobre nós </a>
-          </li>
-          <li>
-            <a href="#servicesSection">Serviços</a>
-          </li>
-          <li>
-            <a href="#Localizacao">localização</a>
-          </li>
-          <li>
-            <a>contatos</a>
-          </li>
-        </ul>
-      </nav>
+     <nav>
+       <img src={logo} />
+      <ul>
+        <li>
+          <Link to="SobreNos">sobre nós </Link>
+        </li>
+        <li>
+          <a href="#servicesSection">Serviços</a>
+        </li>
+        <li>
+          <a href="#Localizacao">localização</a>
+        </li>
+        <li>
+          <a href="#contatos">contatos</a>
+        </li>
+      </ul>
+    </nav>
       <main>
         <div id="cardsMain">
           <div id="leftCard">
             <h1>Pifou?!</h1>
             <img src={FaqImg} />
-            <a>Clique aqui</a>
+            <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21+Preciso+de+um+servi%C3%A7o..." target="__blank">Clique aqui</a>
           </div>
           <div id="rightCard">
             <div id="first">
@@ -82,7 +83,7 @@ function App() {
                   <li>Consertos</li>
                   <li>Personalizações.</li>
                 </ul>
-                <a>Ver serviço</a>
+                <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21+Preciso+de+um+or%C3%A7amento+para+m%C3%A1quina+de+lavar...">Ver serviço</a>
               </div>
             </div>
             <div className="serviceCard">
@@ -91,14 +92,14 @@ function App() {
               </div>
               <div>
                 <h1>Geladeiras</h1>
-                Realizamos:
+                <p>Realizamos:</p>
                 <ul>
                   <li>Higienizações</li>
                   <li>Manutenções</li>
                   <li>Consertos</li>
                   <li>Personalizações.</li>
                 </ul>
-                <a>Ver serviço</a>
+                <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21+Preciso+de+um+or%C3%A7amento+para+geladeira...">Ver serviço</a>
               </div>
             </div>
             <div className="serviceCard">
@@ -115,7 +116,7 @@ function App() {
                   <li>Restaurações</li>
                   <li>Personalizações.</li>
                 </ul>
-                <a>Ver serviço</a>
+                <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21+Preciso+de+um+or%C3%A7amento+para+micro-ondas...">Ver serviço</a>
               </div>
             </div>
             <div className="serviceCard">
@@ -132,7 +133,7 @@ function App() {
                   <li>Consertos</li>
                   <li>Personalizações.</li>
                 </ul>
-                <a>Ver serviço</a>
+                <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21+Preciso+de+um+or%C3%A7amento+para+ar-condicionado...">Ver serviço</a>
               </div>
             </div>
             <div className="serviceCard" id="cafeteiraCard">
@@ -147,7 +148,7 @@ function App() {
                   <li>Manutenções</li>
                   <li>Consertos</li>
                 </ul>
-                <a>Ver serviço</a>
+                <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21+Preciso+de+um+or%C3%A7amento+para+cafeteira...">Ver serviço</a>
               </div>
             </div>
             <div className="serviceCard">
@@ -162,7 +163,7 @@ function App() {
                   <li>Manutenções</li>
                   <li>Consertos</li>
                 </ul>
-                <a>Ver serviço</a>
+                <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21+Preciso+de+um+or%C3%A7amento+para+forno+el%C3%A9trico...">Ver serviço</a>
               </div>
             </div>
             <div className="serviceCard">
@@ -177,7 +178,7 @@ function App() {
                   <li>Restaurações</li>
                   <li>Personalizações.</li>
                 </ul>
-                <a>Ver serviço</a>
+                <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21+Preciso+de+um+or%C3%A7amento+para+freezer...">Ver serviço</a>
               </div>
             </div>
           </section>
@@ -186,7 +187,7 @@ function App() {
           <div id="Localizacao">
             <h1>Estamos logo alí!</h1>
             <p id="textMap">
-              Nossos orçamentos e visitas técnicas são grátis e sem compromisso!
+              Nossos orçamentos e visitas técnicas são grátis para o Partenon!
               <br />
               Não perca tempo, agende um horário!
             </p>
@@ -195,7 +196,7 @@ function App() {
               Av. Bento Gonçalves, 5970 - Partenon, Porto Alegre - RS CEP:
               90650-001
             </p>
-            <a className="buttonStyle">Agendar horário!</a>
+            <a className="buttonStyle" href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21+Gostaria+de+agendar+uma+visita...">Agendar horário!</a>
           </div>
           <div id="contatos">
             <h1>Contatos</h1>
@@ -203,15 +204,15 @@ function App() {
               <ul>
                 <li>
                   <img src={Whatsapplogo} className="icon" />
-                  <a> (51) 99834-9409 </a>
+                  <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21"> (51) 99834-9409 </a>
                 </li>
                 <li>
                   <img src={FixoLogo} className="icon" />
-                  <a> (51) 3319-4962 </a>
+                  <a href="tel:+555133194962"> (51) 3319-4962 </a>
                 </li>
                 <li>
                   <img src={EmailLogo} className="icon" />
-                  <a> matusamarcelo@gmail.com</a>
+                  <a href = "mailto:matusamarcelo@gmail.com?subject = Orçamento &body = Olá, gostaria de realizar um orçamento."> matusamarcelo@gmail.com</a>
                 </li>
               </ul>
               <img src={BonecosContatos} id="imgContato" />
@@ -230,7 +231,7 @@ function App() {
         <img src={logo} />
         <ul>
           <li>
-            <a>sobre nós </a>
+            <Link to="SobreNos">sobre nós </Link>
           </li>
           <li>
             <a href="#servicesSection">Serviços</a>
@@ -241,20 +242,20 @@ function App() {
           <li><a href="#contatos">Contatos</a></li>
           <li>
             <div>
-              <a>
+              <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21">
                 <img src={Whatsapplogo} className="icon" />
               </a>
-              <a>
+              <a href="tel:+555133194962">
                 <img src={FixoLogo} className="icon" />
               </a>
-              <a>
+              <a href = "mailto:matusamarcelo@gmail.com?subject = Orçamento &body = Olá, gostaria de realizar um orçamento.">
                 <img src={EmailLogo} className="icon" />
               </a>
             </div>
           </li>
         </ul>
-        <p>
-          <a id="assinatura">Developed by Maximiliano Lopes</a>
+        <p id="assinatura" >
+          Copyright © Refrigeração Lopes - CNPJ: 14.664.715/0001-53 |<a href="https://wa.me/351933725264?text=Ol%C3%A1%2C+vim+pelo+site%21">  Developed by Maximiliano Lopes</a>
         </p>
       </footer>
     </div>

@@ -282,6 +282,7 @@ main{
 }
 .carousel-root{
     margin-top: 5vh;
+    margin-bottom: 10vh;
 }
 .carousel{
     max-width: 50vw;
@@ -455,13 +456,11 @@ footer img{
     color: rgba(0, 0, 0, 0.567);
 }
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px){
      nav {
         flex-direction: column;
      }
-     nav img {
-        width: 30%;
-     }
+     
      nav ul{
         width: 100%;
         justify-content: space-evenly;
@@ -676,6 +675,287 @@ footer img{
         max-width: 80vw;
         box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
         border-radius: 20px;
+        margin-bottom: 10vh;
+    }
+    .starReview{
+        width: 3vw !important;  
+        height: 3vw;
+    }
+    .StarsArea{
+        background-color: white;
+        width: max-content;
+        
+        padding: 1vw;
+        border-radius: 10px;  
+        white-space: nowrap;
+    }
+    .TimeAgoArea{
+        font-size: 3vw;
+        margin-left: 70%;
+    }
+    .textAuthor{
+        background-color: #f9c015;
+        text-align:justify ;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 2vw;
+        border-radius: 15px;
+        padding: 4vw;
+    }
+    footer li{
+        font-size:4.5vw;
+    }
+    footer img{
+        width: min(35%, 300px);
+        padding: 1vw;
+        padding-top: 5vh;
+    }
+    .icon{
+        width: 8vw;
+        padding: 2vw;
+    }
+    #avaliacoesArea h1 {
+        text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+        font-size: 8vw !important;
+    }
+
+   
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 950px){
+    nav {
+        flex-direction: column;
+        padding-bottom: 1vw;
+        padding-top: 1vw;
+     }
+     nav img {
+        padding: 2vw;
+     }
+     nav ul{
+        width: 100%;
+        justify-content: space-evenly;
+        font-size: 180%;
+    }
+    #cardsMain{
+        margin-top: -5vh;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    #leftCard{
+       
+        width: 50vw;
+        height: fit-content;
+        padding: 2.5vw;
+        padding-bottom: 10vw;
+        border-radius: 30%;
+    }
+    #leftCard h1{
+        font-size: 8vw;
+        text-shadow: 2px 2px 1px rgba(255, 255, 0, 0.84);
+        letter-spacing: 4px;
+    }
+    #leftCard img{
+        width: 35vw;
+    }
+    #leftCard a{
+        font-size: 4vw;
+        background-color: yellow;
+        padding-top: .2vw;
+        padding-bottom: .2vw;
+        padding-right: .6vw;
+        padding-left: .6vw;
+        border-radius: 20px;
+        box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.811);
+        transition: .3s;
+        transition-duration: .3s;
+        margin-top: 11.5em;
+        position: absolute;
+    }
+    #leftCard a:hover{
+        margin-top: 11.5em !important;
+        background-color: yellow;
+    }
+    #rightCard {
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 60vw;
+        padding: 2.5vw;
+
+    }
+    #rightCard #first, #seccond{
+        padding: 1.5vw;
+    }
+    #rightCard #first {
+        width: 50%;
+        text-align: right;
+    }
+    #rightCard #seccond{
+        width: 50%;
+        text-align: left;
+        font-size: 4vw;
+    }
+    #rightCard #seccond p{
+        width: 100%;
+        padding: 0.4vw;
+    }
+    #rightCard h1{
+        text-align: right;
+        font-size: 9vw;
+        text-shadow: 2px 2px 1px rgba(255, 255, 0, 0.703);
+    }
+    #estrelasImg{
+        width: 29vw;
+    }
+
+    #servicesSection section{
+        width: 100%;
+        margin-top: 0vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    
+    }
+    #servicesSection {
+        width: 100%;
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #servicesSection #servicesTitle{
+        text-shadow: 1px 1px 1px rgba(255, 255, 0, 0.703);
+        font-size: 7vw;
+    
+    }
+    .serviceCard{
+        margin-top: 5vh;       
+        width: 60vw;
+        padding: 3vh;
+        display: flex;
+        justify-content: center;
+    }
+    .serviceCard div {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .serviceCard div ul, .serviceCard div p{
+        text-align: left;
+        font-size: 4vw;
+        margin-bottom: .3em;
+    }
+    .serviceCard div ul li{
+        margin-left: 1.5em;
+    }
+    .serviceCard img{
+        width: 30vw;
+        height: 30vw;
+        background-color: rgba(255, 255, 255, 0.629);
+        border-radius: 15px;
+        margin-right: 1vw;
+    }
+    .serviceCard h1{
+        font-size: 5vw;
+        text-shadow: 1px 1px 1px rgba(255, 255, 0, 0.703);
+    }
+    .serviceCard #geladeiraImg{
+        width: 28vw;
+        padding: 1vw;
+        height: auto;
+    }
+    .serviceCard a{
+        font-size: 4vw;
+        background-color: yellow;
+        padding-top: .5vw;
+        padding-bottom: .5vw;
+        padding-right: 1.5vw;
+        padding-left: 1.5vw;
+        border-radius: 20px;
+        box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.811);
+        position: relative;
+        margin-top: 0em;
+        
+        transition: 0.3s;
+    }
+    .serviceCard div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+    #Localizacao h1{
+        margin-bottom: 1vh;
+        text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+        font-size: 9vw;
+    }
+    #Localizacao{
+        margin-top: 10vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 70vw;
+        height: 100vw;
+        background-color: rgba(255, 0, 0, 0.866);
+        border-right: 5px solid rgba(114, 6, 6, 0.756);
+        border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+        box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+        padding: 1vw;
+        border-radius: 20px;
+    }
+    #textMap{
+        font-size: 4vw;
+    }
+    #enderecoP{
+        font-size: 4vw;
+        width: 80%;
+        height: fit-content;
+        margin-bottom: 2vh;
+    }
+    .buttonStyle{
+        font-size: 5vw;
+        padding-top: .5vw;
+        padding-bottom: .5vw;
+        padding-right: 1.5vw;
+        padding-left: 1.5vw;
+        margin-bottom: 2vw;
+    }
+    #contatos div ul li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1vw;
+        font-size: 130%;
+        width: max-content;
+    }
+    #contatos div ul li a{
+        text-decoration: underline 2px rgba(126, 120, 2, 0.414);
+    }
+    #contatos h1{
+        text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+        font-size: 8vw;
+    }
+    .icon{
+        width: 4.5vw;
+        padding: .8vw;
+    }
+    #imgContato{
+     width: 27vw;
+    }
+    .carousel{
+        max-width: 80vw;
+        box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+        border-radius: 20px;
         
     }
     .starReview{
@@ -715,19 +995,107 @@ footer img{
         width: 8vw;
         padding: 2vw;
     }
-
+    
 
    
+
+
+
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 950px) {
+    nav{
+        align-items: center;
+        justify-content: space-evenly;
+    }
+   nav ul{
+    font-size: 110%;
+    justify-content: center;
+    
+   }
+   nav img{
+    width: 20vw;
+   }
+   .serviceCard div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .serviceCard a{
+    font-size: 1.5vw;
+    background-color: yellow;
+    box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.811);
+    position: relative;
+    width: fit-content;
+    
+}
+   
+   .serviceCard div ul, .serviceCard div p{
+    text-align: left;
+    font-size: 1.5vw;
+    margin-bottom: .3em;
+    
+}
+.serviceCard div ul li{
+    margin-left: 1.5em;
+}
+#Localizacao{
+    margin-top: 20vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 50vw;
+    background-color: rgba(255, 0, 0, 0.866);
+    border-right: 5px solid rgba(114, 6, 6, 0.756);
+    border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+    padding: 1vw;
+    border-radius: 20px;
+}
+#Localizacao h1{
+    margin-bottom: 1vh;
+    text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+    font-size: 3vw;
+}
+#textMap{
+    font-size: 1.5vw;
+
+}
+#enderecoP{
+        font-size: 1.5vw;
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 2vh;
+    }
+
+    .buttonStyle{
+        font-size: 1.5vw;
+        padding-top: .5vw;
+        padding-bottom: .5vw;
+        padding-right: 1.5vw;
+        padding-left: 1.5vw;
+        margin-bottom: 1vw;
+    }
+    footer li{
+        font-size:2vw;
+    }
+    footer img{
+        width: min(35%, 200px);
+        padding: 1vw;
+        padding-top: 5vh;
+    }
+    .icon{
+        width: 4vw;
+        padding: 1.5vw;
+    }
+
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -737,6 +1105,24 @@ footer img{
         padding: 1vw;
     }
     nav img {
-        width: 20vh;
+        width: 12vw;
     }
+    #Localizacao{
+        margin-top: 10vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 40vw;
+        height: 30vw;
+        background-color: rgba(255, 0, 0, 0.866);
+        border-right: 5px solid rgba(114, 6, 6, 0.756);
+        border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+        box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+        padding: 1vw;
+        border-radius: 20px;
+    }
+
+
 }

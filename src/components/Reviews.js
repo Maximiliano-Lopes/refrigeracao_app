@@ -8,10 +8,10 @@ export function Reviews() {
   var ReviewsArea = [];
  
 
-  AllReviews.reviews.forEach((review) => { 
+  AllReviews.reviews.forEach((review, i) => { 
     let Stars = []  
     for (let index = 0; index < review.rating; index++) {
-        Stars.push(<img src= {Star} className="starReview"/>)
+        Stars.push(<img src={Star} className="starReview" key={`${i}-${index}`}/>)
     }
     let text = ""
     if (review.text == "") {
@@ -21,9 +21,9 @@ export function Reviews() {
     }
 
     ReviewsArea.push(
-            <div className="containerReview">
+            <div className="containerReview" key={i}>
                 <div className="authorArea">
-                    <img src={review.profile_photo_url} className="IconAuthor"/>
+                    <img src={review.profile_photo_url} className="IconAuthor" />
                     <p className="NameAuthor">{review.author_name}</p>
                     <div className="StarsArea">{Stars}</div>
                 </div>
@@ -35,5 +35,5 @@ export function Reviews() {
             );
   });
 
-  return <Carousel id="googleReviews">{ReviewsArea}</Carousel>;
+  return <Carousel id="googleReviews" showThumbs={false}>{ReviewsArea}</Carousel>;
 }
