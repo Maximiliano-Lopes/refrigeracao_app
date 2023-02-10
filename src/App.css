@@ -1,38 +1,742 @@
-.App {
-  text-align: center;
+*{
+    padding: 0; 
+    margin: 0;
+    scroll-behavior: smooth;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-image: url(/src/images/RefrigeraçãoBackground.png);
+    overflow-x: hidden;
+    background-attachment: fixed;
+    font-family: 'Bebas Neue', cursive;
+    min-width: 300px;
+    
+}
+nav{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 250px;
+    background-color: rgba(255, 0, 0, 0.866);
+    box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.601);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+nav ul{
+    width: 55%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    
+}
+nav ul li{
+    cursor: pointer;
+    font-size: 80%;
+    padding: 1vw;
+}
+nav img {
+    width: 14vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10vh;
+}
+#cardsMain{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-between;
+}
+#leftCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.866);
+    border-right: 5px solid rgba(114, 6, 6, 0.756);
+    border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+    width: 20vw;
+    height: fit-content;
+    padding: 2.5vw;
+    padding-bottom: 5vw;
+    border-radius: 30%;
+}
+#leftCard h1{
+    font-size: 3.5vw;
+    text-shadow: 2px 2px 1px rgba(255, 255, 0, 0.84);
+    letter-spacing: 4px;
+}
+#leftCard img{
+    width: 14vw;
+}
+#leftCard a{
+    font-size: 1.3vw;
+    background-color: yellow;
+    padding-top: .2vw;
+    padding-bottom: .2vw;
+    padding-right: .6vw;
+    padding-left: .6vw;
+    border-radius: 20px;
+    box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.811);
+    
+    margin-top: 15em;
+    position: absolute;
+}
+#leftCard a:hover{
+    transition: 0.3s;
+    transition-delay: 0.1s;
+    margin-top: 14.7em;
+}
+#rightCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 35vw;
+    padding: 2.5vw;
+    background-color: rgba(255, 0, 0, 0.866);
+    border-right: 5px solid rgba(114, 6, 6, 0.756);
+    border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+    border-radius: 12%;
+}
+#rightCard #first, #seccond{
+    padding: .5vw;
+}
+#rightCard #first {
+    width: 50%;
+    text-align: right;
+}
+#rightCard #seccond{
+    width: 50%;
+    text-align: left;
+    font-size: 1.5vw;
+}
+#rightCard #seccond p{
+    width: 80%;
+    padding: 0.4vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+#rightCard h1{
+    text-align: right;
+    font-size: 3.5vw;
+    text-shadow: 2px 2px 1px rgba(255, 255, 0, 0.703);
+}
+#estrelasImg{
+    width: 9vw;
+}
+#servicesSection section{
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+#servicesSection {
+    width: 100%;
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#servicesSection #servicesTitle{
+    text-shadow: 1px 1px 1px rgba(255, 255, 0, 0.703);
+    font-size: 3vw;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.serviceCard{
+    margin-top: 10vh;
+    
+    width: 35vw;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 0, 0, 0.866);
+    border-right: 5px solid rgba(114, 6, 6, 0.756);
+    border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+    border-radius: 12%;
+    padding: 5vh;
+}
+.serviceCard div ul, .serviceCard div p{
+    text-align: left;
+    font-size: 1.3vw;
+}
+.serviceCard img{
+    width: 20vw;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.629);
+    border-radius: 15px;
+}
+.serviceCard h1{
+    text-shadow: 1px 1px 1px rgba(255, 255, 0, 0.703);
+}
+.serviceCard #geladeiraImg{
+    width: 15vw;
+    padding: 1vw;
+    height: auto;
+}
+.serviceCard a{
+    font-size: 1vw;
+    background-color: yellow;
+    padding-top: .2vw;
+    padding-bottom: .2vw;
+    padding-right: .9vw;
+    padding-left: .9vw;
+    border-radius: 20px;
+    box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.811);
+    position: absolute;
+    margin-top: 1em;
+    transition: 0.3s;
+}
+.serviceCard a:hover{
+    background-color: rgba(241, 239, 237, 0.999);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#informationsArea{
+    display: flex;
+    align-items: baseline;
+    width: 90vw;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#Localizacao h1{
+    margin-bottom: 1vh;
+    text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+    font-size: 2vw;
+}
+#Localizacao{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 35vw;
+    height: 25vw;
+    background-color: rgba(255, 0, 0, 0.866);
+    border-right: 5px solid rgba(114, 6, 6, 0.756);
+    border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+    padding: 1vw;
+    border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.markerStyle{    
+    margin-top: -40%;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.823);
+    border: 2px solid yellow;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2vw;
+    border-radius:50px ;
+    padding: 0.5vw;
+}
+#enderecoP{
+    margin-top: 1vh;
+    padding: 1vh;
+    border-radius: 15px;
+    background-color: white;
+    border-right: 5px solid rgba(218, 196, 0, 0.559);
+    border-bottom: 4px solid rgba(218, 196, 0, 0.559);
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.333);
+    margin-bottom: 2.5vh;
+}
+#textMap{
+    font-size: 1.2vw;
+    text-shadow: 1px 1px 1px rgba(255, 255, 0, 0.266);
+    margin-bottom: .5vh;
+}
+.buttonStyle{
+    font-size: 1.2vw;
+    background-color: yellow;
+    padding-top: .2vw;
+    padding-bottom: .2vw;
+    padding-right: .6vw;
+    padding-left: .6vw;
+    border-radius: 20px;
+    box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.811);
+}
+.buttonStyle:hover{
+    transition: 0.2s;
+    background-color: rgba(255, 255, 0, 0.715);
+}
+.control-arrow, .control-next, .carousel-status{
+    display: none;
+}
+.carousel-root{
+    margin-top: 5vh;
+}
+.carousel{
+    max-width: 50vw;
+    max-height: auto;
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+    border-radius: 20px;
+    
+}
+.carousel ul{
+    border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.starReview{
+    width: 2vw !important;  
+    height: 2vw;
+}
+.StarsArea{
+    background-color: white;
+    width: max-content;
+    height: fit-content;
+    padding: 1vw;
+    border-radius: 10px;  
+}
+.TimeAgoArea{
+    margin-left: 80%;
+    padding: .5vw;
+    color: rgba(0, 0, 0, 0.766);
+}
+.containerReview{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.866);
+    border-right: 5px solid rgba(114, 6, 6, 0.756);
+    border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+    padding: 1vw;
+    border-radius: 20px;
+    
+}
+.textAuthor{
+    background-color: #f9c015;
+    text-align:justify ;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 2vw;
+    border-radius: 15px;
+    padding: 1vw;
+}
+.authorArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1vw;
+}
+.NameAuthor{
+    width: 60%;
+    text-align: left;
+}
+.IconAuthor{  
+    max-width: 50px;
+    padding: .2vh;
+}
+#avaliacoesArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+#avaliacoesArea h1{
+    text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+    font-size: 3vw;
+}
+#contatos{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.866);
+    border-right: 5px solid rgba(114, 6, 6, 0.756);
+    border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+    padding: 1vw;
+    border-radius: 20px;
+    width: max-content;
+    height: max-content;
+}
+#contatos div{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+    width: fit-content;
+}
+#contatos div ul {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 15px;
+}
+#contatos div ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1vw;
+    font-size: 160%;
+    width: max-content;
+}
+#contatos div ul li a{
+    text-decoration: underline 2px rgba(126, 120, 2, 0.414);
+}
+#contatos h1{
+    text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+    font-size: 3vw;
+}
+.icon{
+    width: 2vw;
+    padding: .8vw;
+}
+#imgContato{
+ width: 17vw;
+}
+footer{
+    width: 100vw;
+    height: max-content;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0.866);
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items:center;
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+footer li{
+    font-size: min(125%, 1.2vw);
+    margin-bottom: 1vh;
+    width: max-content;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer li div{
+    margin-top: 3vh;
+    background-color: rgba(255, 255, 255, 0.785);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    align-self: center;
+    border-radius: 20px;
+}
+
+footer img{
+    width: min(25%, 300px);
+    padding: 1vw;
+}
+#assinatura{
+    color: rgba(0, 0, 0, 0.567);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+     nav {
+        flex-direction: column;
+     }
+     nav img {
+        width: 30%;
+     }
+     nav ul{
+        width: 100%;
+        justify-content: space-evenly;
+        font-size: 120%;
+    }
+    #cardsMain{
+        margin-top: -5vh;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    #leftCard{
+       
+        width: 50vw;
+        height: fit-content;
+        padding: 2.5vw;
+        padding-bottom: 10vw;
+        border-radius: 30%;
+    }
+    #leftCard h1{
+        font-size: 8vw;
+        text-shadow: 2px 2px 1px rgba(255, 255, 0, 0.84);
+        letter-spacing: 4px;
+    }
+    #leftCard img{
+        width: 35vw;
+    }
+    #leftCard a{
+        font-size: 4vw;
+        background-color: yellow;
+        padding-top: .2vw;
+        padding-bottom: .2vw;
+        padding-right: .6vw;
+        padding-left: .6vw;
+        border-radius: 20px;
+        box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.811);
+        transition: .3s;
+        transition-duration: .3s;
+        margin-top: 11.5em;
+        position: absolute;
+    }
+    #leftCard a:hover{
+        margin-top: 11.5em !important;
+        background-color: yellow;
+    }
+    #rightCard {
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 60vw;
+        padding: 2.5vw;
+
+    }
+    #rightCard #first, #seccond{
+        padding: 1.5vw;
+    }
+    #rightCard #first {
+        width: 50%;
+        text-align: right;
+    }
+    #rightCard #seccond{
+        width: 50%;
+        text-align: left;
+        font-size: 4vw;
+    }
+    #rightCard #seccond p{
+        width: 100%;
+        padding: 0.4vw;
+    }
+    #rightCard h1{
+        text-align: right;
+        font-size: 9vw;
+        text-shadow: 2px 2px 1px rgba(255, 255, 0, 0.703);
+    }
+    #estrelasImg{
+        width: 29vw;
+    }
+
+    #servicesSection section{
+        width: 100%;
+        margin-top: 0vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    
+    }
+    #servicesSection {
+        width: 100%;
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #servicesSection #servicesTitle{
+        text-shadow: 1px 1px 1px rgba(255, 255, 0, 0.703);
+        font-size: 7vw;
+    
+    }
+    .serviceCard{
+        margin-top: 5vh;       
+        width: 60vw;
+        padding: 3vh;
+        display: flex;
+        justify-content: center;
+    }
+    .serviceCard div {
+        width: fit-content;
+    }
+    .serviceCard div ul, .serviceCard div p{
+        text-align: left;
+        font-size: 4vw;
+        margin-bottom: .3em;
+    }
+    .serviceCard div ul li{
+        margin-left: 1.5em;
+    }
+    .serviceCard img{
+        width: 30vw;
+        height: 30vw;
+        background-color: rgba(255, 255, 255, 0.629);
+        border-radius: 15px;
+        margin-right: 1vw;
+    }
+    .serviceCard h1{
+        text-shadow: 1px 1px 1px rgba(255, 255, 0, 0.703);
+    }
+    .serviceCard #geladeiraImg{
+        width: 28vw;
+        padding: 1vw;
+        height: auto;
+    }
+    .serviceCard a{
+        font-size: 4vw;
+        background-color: yellow;
+        padding-top: .5vw;
+        padding-bottom: .5vw;
+        padding-right: 1.5vw;
+        padding-left: 1.5vw;
+        border-radius: 20px;
+        box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.811);
+        position: relative;
+        margin-top: -1em;
+        
+        transition: 0.3s;
+    }
+    #Localizacao h1{
+        margin-bottom: 1vh;
+        text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+        font-size: 9vw;
+    }
+    #Localizacao{
+        margin-top: 10vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 70vw;
+        height: 100vw;
+        background-color: rgba(255, 0, 0, 0.866);
+        border-right: 5px solid rgba(114, 6, 6, 0.756);
+        border-bottom: 4px solid rgb(114, 6, 6, 0.756);
+        box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+        padding: 1vw;
+        border-radius: 20px;
+    }
+    #textMap{
+        font-size: 4vw;
+    }
+    #enderecoP{
+        font-size: 4vw;
+        width: 80%;
+        height: fit-content;
+        margin-bottom: 2vh;
+    }
+    .buttonStyle{
+        font-size: 5vw;
+        padding-top: .5vw;
+        padding-bottom: .5vw;
+        padding-right: 1.5vw;
+        padding-left: 1.5vw;
+        margin-bottom: 2vw;
+    }
+    #contatos div ul li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1vw;
+        font-size: 130%;
+        width: max-content;
+    }
+    #contatos div ul li a{
+        text-decoration: underline 2px rgba(126, 120, 2, 0.414);
+    }
+    #contatos h1{
+        text-shadow: 1px 1px 1px rgb(255 255 0 / 70%);
+        font-size: 8vw;
+    }
+    .icon{
+        width: 4.5vw;
+        padding: .8vw;
+    }
+    #imgContato{
+     width: 27vw;
+    }
+    .carousel{
+        max-width: 80vw;
+        box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.333);
+        border-radius: 20px;
+        
+    }
+    .starReview{
+        width: 3vw !important;  
+        height: 3vw;
+    }
+    .StarsArea{
+        background-color: white;
+        width: max-content;
+        
+        padding: 1vw;
+        border-radius: 10px;  
+        white-space: nowrap;
+    }
+    .TimeAgoArea{
+        font-size: 3vw;
+        margin-left: 70%;
+    }
+    .textAuthor{
+        background-color: #f9c015;
+        text-align:justify ;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 2vw;
+        border-radius: 15px;
+        padding: 4vw;
+    }
+    footer li{
+        font-size:4.5vw;
+    }
+    footer img{
+        width: min(35%, 300px);
+        padding: 1vw;
+        padding-top: 5vh;
+    }
+    .icon{
+        width: 8vw;
+        padding: 2vw;
+    }
+
+
+   
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    nav ul li{
+        cursor: pointer;
+        font-size: 150%;
+        padding: 1vw;
+    }
+    nav img {
+        width: 20vh;
+    }
 }
