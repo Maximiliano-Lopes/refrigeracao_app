@@ -3,7 +3,7 @@ import logo from "../images/Logo-Refrigeracao.png"
 import Whatsapplogo from "../images/WhatsAppLogo.webp"
 import FixoLogo from "../images/telefoneFixo.png"
 import EmailLogo from "../images/EmailIcon.png"
-
+import { HashLink as LinkHash } from 'react-router-hash-link';
 
 
 export default function Footer(){
@@ -15,12 +15,12 @@ export default function Footer(){
             <Link to="/">Início</Link>
           </li>
           <li>
-            <a href="#servicesSection">Serviços</a>
+            <LinkHash to="/#servicesSection">Serviços</LinkHash>
           </li>
           <li>
-            <a href="#Localizacao">localização</a>
+            <LinkHash to="/#Localizacao">localização</LinkHash>
           </li>
-          <li><a href="#contatos">Contatos</a></li>
+          <li><LinkHash to="/#contatos">Contatos</LinkHash></li>
           <li>
             <div>
              <a href="https://wa.me/5551998349409?text=Ol%C3%A1%2C+vim+pelo+site%21">

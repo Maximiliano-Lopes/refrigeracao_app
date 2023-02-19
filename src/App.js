@@ -16,7 +16,7 @@ import FixoLogo from "./images/telefoneFixo.png";
 import EmailLogo from "./images/EmailIcon.png";
 import {Link} from "react-router-dom";
 import { Reviews } from "./components/Reviews";
-
+import { HashLink as LinkHash } from 'react-router-hash-link';
 
 function App() {
   const url =
@@ -31,13 +31,13 @@ function App() {
           <Link to="SobreNos">sobre nós </Link>
         </li>
         <li>
-          <a href="#servicesSection">Serviços</a>
+          <LinkHash to="#servicesSection">Serviços</LinkHash>
         </li>
         <li>
-          <a href="#Localizacao">localização</a>
+          <LinkHash to="#Localizacao">localização</LinkHash>
         </li>
         <li>
-          <a href="#contatos">contatos</a>
+          <LinkHash to="#contatos">contatos</LinkHash>
         </li>
       </ul>
     </nav>
